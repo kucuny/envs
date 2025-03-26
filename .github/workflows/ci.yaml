@@ -27,10 +27,10 @@ jobs:
           go-version: '1.24.x'
 
       - name: Lint
-        uses: golangci/golangci-lint-action@v6
+        uses: golangci/golangci-lint-action@v7
         with:
           install-mode: binary
-          args: --timeout=5m --out-format=checkstyle > lint.out
+          args: --timeout=5m --output.checkstyle.path=lint.out
 
   unittest:
     name: Run unit/benchmark tests
